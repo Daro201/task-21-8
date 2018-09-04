@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+express = require('express');
+app = express();
 
+app.get('/', (req, res) => res.send('My website!'));
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://user-1:*123zxc@ds243812.mlab.com:43812/database-1', {
     useMongoClient: true
