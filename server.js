@@ -1,9 +1,13 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-express = require('express');
-app = express();
+const mongoose = require('mongoose'),
+  Schema = mongoose.Schema,
+  PORT = process.env.PORT || 5000,
+  express = require('express'),
+  app = express();
 
-app.get('/', (req, res) => res.send('My website!'));
+app.get('/', (req, res) => res.send('New Website'));
+
+app.listen(PORT, () => console.log('Example app listening on port 3000!'));
+
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://user-1:*123zxc@ds243812.mlab.com:43812/database-1', {
     useMongoClient: true
